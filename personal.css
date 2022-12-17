@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height:auto;
+    width: 100%;
+}
+header{
+    position: relative;
+    height: 670px;
+    width: auto;
+    background-color: aqua;
+    background-image: url(./home.png);
+    background-size: cover;
+    background-position: center;
+}
+ul li{
+    list-style: none;
+}
+header>ul{
+    width: 70%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.811);
+    top:3%;
+    left: 15%;
+    letter-spacing:10px;
+}
+header>ul>li{
+    flex:1;
+    text-align: center;
+}
+.headerspan{
+    color: rgba(255, 255, 255, 0.811);
+    font-size: 18px;
+    font-family: KaiTi;
+    letter-spacing: 20px;
+}
+.headerspan>span:first-child{
+    display: block;
+    position: absolute;
+    top:60%;
+    left:32%;
+}
+.headerspan>span:nth-child(2){
+    display: block;
+    position: absolute;
+    top:65%;
+    left:32%;
+}
+.headerspan>span:nth-child(3){
+    display: block;
+    position: absolute;
+    top:70%;
+    left:32%;
+}
+.down{
+    position: absolute;
+    bottom: 3%;
+    left: 48%;
+}
+.down>img{
+    height: 30%;
+    width: 30%;
+}
