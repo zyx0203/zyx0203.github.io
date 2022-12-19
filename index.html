@@ -2,7 +2,7 @@
  * @Author: zyx 13415143367@163.com
  * @Date: 2022-12-17 20:19:30
  * @LastEditors: zyx 13415143367@163.com
- * @LastEditTime: 2022-12-18 14:18:43
+ * @LastEditTime: 2022-12-19 17:06:05
  * @FilePath: \vscode file\personal\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -24,7 +24,7 @@
             <li>zhao yuan xin</li>
         </ul>
         <div class="down">
-            <img src="./double-down-arrow.png">
+            <img src="./image/double-down-arrow.png">
         </div>
         <div class="headerspan">
         <span>在这个时代，根本就没有怀才不遇</span>
@@ -62,10 +62,137 @@
             </div>
         </div>
         <div class="down">
-            <img src="./double-down-arrow.png">
+            <img src="./image/double-down-arrow.png">
         </div>
     </section>
-    <article></article>
+    <article>
+        <div class="skill">
+            <div class="imgone">
+            </div>
+        </div>
+        <div class="line lineactive"></div>
+        <div class="bline"></div>
+        <div class="wline wlineactive"></div>
+        <div class="wbline"></div>
+        <div class="box">
+            <ul>
+                <div class="active"></div>
+                <li  class="active">专业技能</li>
+                <div></div>
+                <li>奖励证书</li>
+                <div></div>
+                <li>作品展示</li>
+            </ul>
+            <ol>
+                <div class="little"></div>
+                <li class="active skillactive">
+                    <span>MY SKILL</span>
+                    <div>Html、CSS、JS、VUE、NODEJS、MPVUE、JQuery、ES6</div>
+                    <div>
+                        <div>擅长Vue前端框架，熟练运用Vue-cli开发项目</div>
+                        <div>熟悉Vue-route、axios、vuex等vue全家桶开发</div>
+                        <div>熟练使用主流前端UI框架组件库包括vant、element等</div>
+                        <div>熟悉掌握应用VSCode、HBuilder等开发工具</div>
+                        <div>熟练使用常见的js类库如JQuery，熟悉ES6语法及特性</div>
+                    </div>
+                    <div class="more">
+                        <div>MORE >
+                    </div>
+                </li>
+                <li>
+                    111
+                    <div class="more">
+                        <div>MORE >
+                    </div>
+                </li>
+                <li>
+                    <div class="more">
+                        <div>MORE >
+                    </div>
+                </li>
+                <div class="more">
+                    <div>MORE >
+                </div>
+            </ol>
+            <dl>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </dl>
+        </div>
+    </article>
     <footer></footer>
+    <script>
+        var items = document.querySelectorAll('.box>ul>li')
+        var back = document.querySelectorAll('.box>ol>li')
+        var square = document.querySelectorAll('.box>ul>div')
+        var squares = document.querySelectorAll('.box>dl>li')
+        var linemove = document.querySelector('.line')
+        var wlinemove = document.querySelector('.wline')
+        var flag=true
+            for(var i=0;i<items.length;i++){
+                items[i].setAttribute('index',i)
+                items[i].onclick = function(){
+                    for(var j=0;j<items.length;j++){
+                    items[j].className=''
+                    back[j].className=''
+                    square[j].className=''
+                    squares[j].className=''
+                    linemove.className='lineactive'
+                    wlinemove.className='wlineactive'
+                    setTimeout(function(linemove) {
+                        wlinemove.classList.remove('wlineactive')
+                        linemove.classList.remove('lineactive')
+                        linemove.classList.add('line')
+                        wlinemove.classList.add('wline')
+                    }, 1000, linemove);
+                }
+
+                //this关键字指代当前点击的元素
+                this.className='active'
+                var index = this.getAttribute('index')-0
+                back[index].className='active'
+                square[index].className='active'
+                squares[index].className='active'
+                }
+            }
+
+            for(var i=0;i<squares.length;i++){
+                squares[i].setAttribute('index',i)
+                squares[i].onclick = function(){
+                    for(var j=0;j<squares.length;j++){
+                    items[j].className=''
+                    back[j].className=''
+                    square[j].className=''
+                    squares[j].className=''
+                    }
+                    this.className='active'
+                    var index = this.getAttribute('index')-0
+                    back[index].className='active'
+                    square[index].className='active'
+                    squares[index].className='active'
+                } 
+            }
+            
+            window.onscroll = function(){
+                if(document.documentElement.scrollTop>940){
+                    linemove.className='lineactive'
+                    wlinemove.className='wlineactive'
+                    back[0].classList.add('skillactive')
+                    setTimeout(function(linemove) {
+                        wlinemove.classList.remove('wlineactive')
+                        linemove.classList.remove('lineactive')
+                        linemove.classList.add('line')
+                        wlinemove.classList.add('wline')
+                    }, 1000, linemove);
+                }else{
+                    linemove.className='line'
+                    wlinemove.className='wline'
+                    back[0].classList.remove('skillactive')
+                }
+            }
+
+      
+    </script>
 </body>
 </html>
