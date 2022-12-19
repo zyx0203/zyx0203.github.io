@@ -333,13 +333,17 @@ ol>li{
 }
 .box>ol>li>div:nth-child(3){
     position: absolute;
-    height: 40%;
+    height: 30%;
     width: 90%;
     color: #ffffff;
     left: 1.5%;
-    top: 50%;
+    top: 49%;
     font-size: 15px;
     overflow: hidden;
+}
+.box>ol>li>div:nth-child(3)>div{
+    height: 24px;
+    line-height: 24px;
 }
 .box>ol>li>.more{
     position: absolute;
