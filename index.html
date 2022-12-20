@@ -2,7 +2,7 @@
  * @Author: zyx 13415143367@163.com
  * @Date: 2022-12-17 20:19:30
  * @LastEditors: zyx 13415143367@163.com
- * @LastEditTime: 2022-12-19 17:19:52
+ * @LastEditTime: 2022-12-20 16:10:06
  * @FilePath: \vscode file\personal\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -66,9 +66,12 @@
         </div>
     </section>
     <article>
+        <div class="highlight">Highlight</div>
+        <div class="highlightfk"></div>
+        <div class="mark">01-03</div>
+        <div class="markfk"></div>
         <div class="skill">
-            <div class="imgone">
-            </div>
+            <div class="imgone"></div>
         </div>
         <div class="line lineactive"></div>
         <div class="bline"></div>
@@ -81,14 +84,14 @@
                 <div></div>
                 <li>奖励证书</li>
                 <div></div>
-                <li>作品展示</li>
+                <li>自我描述</li>
             </ul>
             <ol>
                 <div class="little"></div>
                 <li class="active skillactive">
                     <span>MY SKILL</span>
                     <div>Html、CSS、JS、VUE、NODEJS、MPVUE、JQuery、ES6</div>
-                    <div class="skillmessage">
+                    <div>
                         <div>擅长Vue前端框架，熟练运用Vue-cli开发项目</div>
                         <div>熟悉Vue-route、axios、vuex等vue全家桶开发</div>
                         <div>熟练使用主流前端UI框架组件库包括vant、element等</div>
@@ -96,23 +99,34 @@
                         <div>熟练使用常见的js类库如JQuery，熟悉ES6语法及特性</div>
                     </div>
                     <div class="more">
-                        <div>MORE >
+                        <div>NEXT >
                     </div>
                 </li>
                 <li>
-                    111
-                    <div class="more">
-                        <div>MORE >
+                    <span>REWARD</span>
+                    <div>some prize of competition and some credentials </div>
+                    <div>
+                        <div>第九届"大唐杯"全国大学生5G通信技术大赛三等奖</div>
+                        <div>第十二届IT文化节职业生涯规划大赛合格奖</div>
+                        <div>大学英语四级</div>
+                        <div>第八届K歌大赛"十佳歌手"称号</div>
+                        <div>2022-2023年度专业成绩前30%获奖者</div>
+                    </div>
+                    <div class="tmore">
+                        <div>NEXT >
                     </div>
                 </li>
                 <li>
-                    <div class="more">
-                        <div>MORE >
+                    <span>AbOUT ME</span>
+                    <div>some prize of competition and some credentials </div>
+                    <div>
+                        <div>本人性格热情开朗，工作勤奋，认真负责，有较强的自学能力</div>
+                        <div>有较强的组织能力、实际动手能力和团队协作精神，在大学期间加入学生会</div>
+                        <div>参与组织了多场创新创业大会，主持腾讯会议等等。</div>
+                        <div>喜欢思考，能虚心地与人交流从而取长补短</div>
+                        <div>愿意通过积极主动的努力实现自身价值</div>
                     </div>
                 </li>
-                <div class="more">
-                    <div>MORE >
-                </div>
             </ol>
             <dl>
                 <li class="active"></li>
@@ -121,6 +135,49 @@
             </dl>
         </div>
     </article>
+    <div class="work">
+        <div class="prase">
+            <img src="./image/prase.png">
+        </div>
+        <div class="prasemessage">try to press...</div>
+        <div class="workline"></div>
+        <div class="title">
+            <div>some</div>
+            <div>of my works</div>
+        </div>
+        <div class="mpvue">
+            <img src="./image/mpvue1.png" id="preview-image" onclick="previewImage()">
+        </div>
+        <div class="mpvue2">
+            <img src="./image/mpvue2.png" id="preview-image2" onclick="previewImage2()">
+        </div>
+        <div class="mpvuecicle">MPVUE</div>
+        <div class="mpline"></div>
+        <div class="mpline2"></div>
+        <div class="browers"></div>
+        <div class="vue" >
+            <img src="./image/vue1.png" id="preview-image3" onclick="previewImage3()">
+        </div>
+        <div class="vue2" >
+            <img src="./image/vue2.png" id="preview-image4" onclick="previewImage4()">
+        </div>
+        <div class="vuecicle">VUE</div>
+        <div class="vueline"></div>
+        <div class="vueline2"></div>
+    </div>
+    <div class="showpicture">
+        <img src="" id="preview">
+        <div class="closepicture" onclick="closeImage()">
+            <img src="./image/close.png">
+        </div>
+        <div class="picturemessage">
+            该项目是基于mpvue框架开发的智能育雏管控系统的小程序，结合了毕业设计的stm32单片机，实现了对育雏室的智能管控
+        </div>
+        <div class="picturemessage2">
+            基于Vue框架实现卖座电影App的影视列表、详情页布局以及影院选择和用户登陆等功能，结合Vuex减轻服务器压力，配置nginx反向代理，解决跨域请求，通过
+            配置好卖座电影的请求接口利用axios技术拿到官网信息，利用单页面设计完成该项目
+        </div>
+    </div>
     <footer></footer>
     <script>
         var items = document.querySelectorAll('.box>ul>li')
@@ -129,7 +186,18 @@
         var squares = document.querySelectorAll('.box>dl>li')
         var linemove = document.querySelector('.line')
         var wlinemove = document.querySelector('.wline')
+        var tnextbutton = document.querySelector('.tmore')
         var flag=true
+        var indexpage = 0;
+        var nextbutton = document.querySelector('.more')
+        var image = document.getElementById('preview-image');
+        var preview = document.getElementById('preview');
+        var showpicture = document.querySelector('.showpicture')
+        var image2 = document.getElementById('preview-image2');
+        var image3 = document.getElementById('preview-image3');
+        var image4 = document.getElementById('preview-image4');
+        var picturemessage = document.querySelector('.picturemessage')
+        var picturemessage2 = document.querySelector('.picturemessage2')
             for(var i=0;i<items.length;i++){
                 items[i].setAttribute('index',i)
                 items[i].onclick = function(){
@@ -154,6 +222,7 @@
                 back[index].className='active'
                 square[index].className='active'
                 squares[index].className='active'
+                
                 }
             }
 
@@ -170,10 +239,29 @@
                     var index = this.getAttribute('index')-0
                     back[index].className='active'
                     square[index].className='active'
-                    squares[index].className='active'
+                    items[index].className='active'
                 } 
             }
-            
+
+            tnextbutton.onclick = function(){
+                    items[1].className=''
+                    back[1].className=''
+                    square[1].className=''
+                    squares[1].className=''
+                    linemove.className='lineactive'
+                    wlinemove.className='wlineactive'
+                    setTimeout(function(linemove) {
+                        wlinemove.classList.remove('wlineactive')
+                        linemove.classList.remove('lineactive')
+                        linemove.classList.add('line')
+                        wlinemove.classList.add('wline')
+                    }, 1000, linemove);
+                    items[2].className='active'
+                    back[2].className='active'
+                    square[2].className='active'
+                    squares[2].className='active'
+            }
+       
             window.onscroll = function(){
                 if(document.documentElement.scrollTop>940){
                     linemove.className='lineactive'
@@ -191,8 +279,56 @@
                     back[0].classList.remove('skillactive')
                 }
             }
+            
+            nextbutton.onclick = function(){
+                    items[0].className=''
+                    back[0].className=''
+                    square[0].className=''
+                    squares[0].className=''
+                    linemove.className='lineactive'
+                    wlinemove.className='wlineactive'
+                    setTimeout(function(linemove) {
+                        wlinemove.classList.remove('wlineactive')
+                        linemove.classList.remove('lineactive')
+                        linemove.classList.add('line')
+                        wlinemove.classList.add('wline')
+                    }, 1000, linemove);
+                    items[1].className='active'
+                    back[1].className='active'
+                    square[1].className='active'
+                    squares[1].className='active'
+            }
 
-      
+            function previewImage() {
+                showpicture.className='showpicture-active'
+                preview.src = image.src;
+                picturemessage.className='picturemessage-active'
+            }
+
+            function previewImage2() {
+                showpicture.className='showpicture-active'
+                preview.src = image2.src;
+                picturemessage.className='picturemessage-active'
+            }
+
+            function previewImage3() {
+                showpicture.className='showpicture-active'
+                preview.src = image3.src;
+                picturemessage2.className='picturemessage-active'
+            }
+
+            function previewImage4() {
+                showpicture.className='showpicture-active'
+                preview.src = image4.src;
+                picturemessage2.className='picturemessage-active'
+            }
+
+            function closeImage(){
+                showpicture.className='showpicture'
+                picturemessage.className='picturemessage'
+                picturemessage2.className='picturemessage'
+            }
+
     </script>
 </body>
 </html>

@@ -169,6 +169,40 @@ article{
     height: 700px;
     background-color: #748095;
 }
+article>.highlight{
+    color: #ffffff;
+    font-size: 14px;
+    position: absolute;
+    top: 3%;
+    left: 13%;
+    font-family: DengXian Light;
+}
+article>.highlightfk{
+    height:9px;
+    width: 9px;
+    position: absolute;
+    top:3.4%;
+    left: 16.9%;
+    background-color: #ffffff;
+}
+article>.mark{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: DengXian Light;
+    position: absolute;
+    left: 85%;
+    top: 47%;
+    z-index: 99;
+    transform: rotate(90deg);
+}
+article>.markfk{
+    height:12px;
+    width: 12px;
+    position: absolute;
+    top:41.2%;
+    left: 86.2%;
+    background-color: #383f4d;
+}
 .skill{
     height: 80%;
     width: 70%;
@@ -359,7 +393,25 @@ ol>li{
     font-family: DengXian Light;
     text-align: center;
     overflow: hidden;
+    cursor: pointer;
 }
+.box>ol>li>.tmore{
+    position: absolute;
+    left: 1.5%;
+    top: 78%;
+    background-color: #748095;
+    height: 6%;
+    width: 16%;
+    color: #ffffff;
+}
+.box>ol>li>.tmore>div:first-child{
+    line-height: 32px;
+    font-family: DengXian Light;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 dl li{
     list-style: none;
 }
@@ -422,4 +474,234 @@ dl li{
 }
 .box>dl>li.active{
     background-color: #ffffff;
+}
+
+.work{
+    position: relative;
+    height: 700px;
+    background-color: #748095;
+    background-image: url(./image/work.png);
+    background-position: center;
+    background-size: cover;
+}
+.work>.workline{
+    height: 30%;
+    width: 0.1%;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    background-color: #ffffff;
+}
+.work>.title{
+    color: #ffffff;
+    font-size: 30px;
+    padding-top: 15%;
+    padding-left: 17.5%;
+}
+.work>.prase>img{
+    position: absolute;
+    left: 24%;
+    top: 8%;
+    height: 60px;
+    width: 60px;
+}
+.work>.prasemessage{
+    position: absolute;
+    left: 29%;
+    top: 10%;
+    color: rgba(255, 255, 255, 0.811)
+}
+.work>.mpvue>img{
+    position: absolute;
+    left: 16%;
+    top:46%;
+    height: 46.8%;
+    width: 10%;
+    background-color: #748095;
+    background-image: url(./image/mpvue1.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.work>.mpvue>img:hover{
+    top:44.2%;
+}
+.work>.mpvue2>img{
+    position: absolute;
+    left: 31.4%;
+    top:20%;
+    height: 46.8%;
+    width: 10%;
+    background-color: #748095;
+    background-image: url(./image/mpvue2.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+.work>.mpvue2>img:hover{
+    top:18.2%;
+}
+.work>.browers{
+    position: absolute;
+    left: 45%;
+    top:7%;
+    height: 43%;
+    width: 43%;
+    background-color: #748095;
+    background-image: url(./image/browers.png);
+    background-position: center;
+    background-size: cover;
+}
+.work>.vue>img{
+    position: absolute;
+    left: 45%;
+    top:54%;
+    height: 41.8%;
+    width: 9.2%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.work>.vue>img:hover{
+    top:52.2%;
+}
+.work>.vue2>img{
+    position: absolute;
+    left: 78.8%;
+    top:54%;
+    height: 41.8%;
+    width: 9.2%;
+    background-color: #748095;
+    background-image: url(./image/vue2.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.work>.vue2>img:hover{
+    top:52.2%;
+}
+.work>.mpvuecicle{
+    position: absolute;
+    left: 33.2%;
+    top: 75%;
+    height: 100px;
+    width: 100px;
+    background-color: #0c152a;
+    color: #ffffff;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+}
+.work>.mpline{
+    position: absolute;
+    left: 36.4%;
+    top: 65.1%;
+    height: 10%;
+    width: 0.1%;
+    background-color: #ffffff;
+}
+.work>.mpline2{
+    position: absolute;
+    left: 26%;
+    top: 82%;
+    height: 0.2%;
+    width: 7.2%;
+    background-color: #ffffff;
+}
+.work>.vuecicle{
+    position: absolute;
+    left: 63.5%;
+    top: 69%;
+    height: 100px;
+    width: 100px;
+    background-color: #0c152a;
+    color: #ffffff;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    z-index: 98
+}
+.work>.vueline{
+    position: absolute;
+    left: 66.7%;
+    top: 50%;
+    height: 19%;
+    width: 0.1%;
+    background-color: #ffffff;
+}
+.work>.vueline2{
+    position: absolute;
+    left: 54.2%;
+    top: 75.7%;
+    height: 0.2%;
+    width: 28%;
+    background-color: #ffffff;
+}
+.showpicture{
+    display: none;
+    position: fixed;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.627);
+    z-index:99;
+}
+#preview{
+    position: absolute;
+    height: 600px;
+    width: 300px;
+    left: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#preview2{
+    position: absolute;
+    height: 600px;
+    width: 300px;
+    left: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.showpicture-active{
+    position: fixed;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.627);
+    z-index:99;
+}
+.closepicture{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: 30%;
+    top: 3%;
+    background-color: rgba(0, 0, 0, 0.784);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.closepicture>img{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top:12%;
+    left: 12%;
+}
+.picturemessage{
+    display: none;
+}
+.picturemessage-active{
+    position: absolute;
+    height: auto;
+    width: 230px;
+    left: 70%;
+    top: 40%;
+    color: #ffffff;
 }
