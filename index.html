@@ -2,7 +2,7 @@
  * @Author: zyx 13415143367@163.com
  * @Date: 2022-12-17 20:19:30
  * @LastEditors: zyx 13415143367@163.com
- * @LastEditTime: 2022-12-20 16:10:06
+ * @LastEditTime: 2022-12-20 19:05:36
  * @FilePath: \vscode file\personal\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -73,9 +73,9 @@
         <div class="skill">
             <div class="imgone"></div>
         </div>
-        <div class="line lineactive"></div>
+        <div class="line"></div>
         <div class="bline"></div>
-        <div class="wline wlineactive"></div>
+        <div class="wline"></div>
         <div class="wbline"></div>
         <div class="box">
             <ul>
@@ -178,7 +178,38 @@
             配置好卖座电影的请求接口利用axios技术拿到官网信息，利用单页面设计完成该项目
         </div>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="content">
+            <div>HOW</div>
+            <div>CONTACT</div>
+            <div class="me">ME</div>
+        </div>
+        <div class="conline"></div>
+        <div class="linemessage">2022.12</div>
+        <div class="conmessage">
+            <div>
+                <img src="./image/phone.png">
+                <div>TEL:13415143367</div>
+                <div>My Phone Number</div>
+            </div>
+            <div>
+                <img src="./image/wechat.png">
+                <div>VX:13415143367</div>
+                <div>My WeChat Number</div>
+            </div>
+            <div>
+                <img src="./image/email.png">
+                <div>EMAIL:13415143367@163.com</div>
+                <div>My Email Number</div>
+            </div>
+        </div>
+            <img src="./image/wechatlook.png" class="wechat">
+        <div class="footerline"></div>
+        <div class="last">Thank You For Watching</div>
+        <div class="backtop">
+            <img src="./image/double-down-arrow.png">
+        </div>
+    </footer>
     <script>
         var items = document.querySelectorAll('.box>ul>li')
         var back = document.querySelectorAll('.box>ol>li')
@@ -263,19 +294,20 @@
             }
        
             window.onscroll = function(){
-                if(document.documentElement.scrollTop>940){
+                var top = document.documentElement.scrollTop
+                if(top>940){
                     linemove.className='lineactive'
                     wlinemove.className='wlineactive'
                     back[0].classList.add('skillactive')
-                    setTimeout(function(linemove) {
+/*                      setTimeout(function(linemove) {
                         wlinemove.classList.remove('wlineactive')
                         linemove.classList.remove('lineactive')
                         linemove.classList.add('line')
                         wlinemove.classList.add('wline')
-                    }, 1000, linemove);
+                    }, 1000, linemove); */
                 }else{
-                    linemove.className='line'
-                    wlinemove.className='wline'
+                    wlinemove.classList.remove('wlineactive')
+                    linemove.classList.remove('lineactive')
                     back[0].classList.remove('skillactive')
                 }
             }
