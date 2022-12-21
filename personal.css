@@ -3,11 +3,12 @@
     padding:0;
 }
 body{
+    position: relative;
     height:auto;
     width: 100%;
     background-color: #2e344e;
-
 }
+
 header{
     position: relative;
     height: 670px;
@@ -45,12 +46,14 @@ header>ul>li{
     position: absolute;
     top:60%;
     left:32%;
+    animation: span3down 0.7s linear;
 }
 .headerspan>span:nth-child(2){
     display: block;
     position: absolute;
     top:65%;
     left:32%;
+    animation: span2down 0.7s linear;
 }
 .headerspan>span:nth-child(3){
     display: block;
@@ -58,12 +61,45 @@ header>ul>li{
     top:25%;
     left:26%;
     font-size: 35px;
+    animation: span1down 0.7s linear;
+}
+
+@keyframes span1down{
+    from{
+        opacity: 0;
+        top: 20%;
+    }
+    to{
+        opacity: 1;
+        top:25%
+    }
+}
+@keyframes span2down{
+    from{
+        opacity: 0;
+        top: 70%;
+    }
+    to{
+        opacity: 1;
+        top:65%
+    }
+}
+@keyframes span3down{
+    from{
+        opacity: 0;
+        top: 65%;
+    }
+    to{
+        opacity: 1;
+        top:60%
+    }
 }
 .down{
     position: absolute;
     bottom: 3%;
     left: 48%;
     animation: updown ease-in 0.6s infinite alternate;
+    cursor: pointer;
 }
 .down>img{
     height: 30%;
@@ -77,6 +113,106 @@ header>ul>li{
         bottom: 2%;
     }
 }
+
+
+aside{
+    position: fixed;
+    top: 20%;
+    right: 3%;
+    z-index: 100;
+}
+aside>ul li{
+    list-style: none;
+}
+aside>ul{
+    top: 20%;
+    right: 3%;
+    height: 350px;
+    width: 100px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 70px;
+}
+aside>ul>li{
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+aside>ul>li>img{
+    height: 25px;
+    width: 25px;
+    padding-right:8px ;
+    vertical-align: -5px;
+}
+#list li {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    }
+
+    #list li.show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+aside>ul>li.active{
+    font-size: 22px;
+}
+aside>ul>li.active:after{
+    content: ' ';
+    display: block;
+    height: 2px;
+    width: 60px;
+    overflow: hidden;
+    float: right;
+    background-color: #ffffff;
+    transform: translateY(-15px);
+}
+aside>ul>li:hover{
+    font-size: 22px;
+}
+
+.aside2{
+    position: relative;
+    z-index: 99;
+    animation: aside2appear 1s linear;
+}
+.aside2>img:first-child{
+    position: fixed;
+    height: 26px;
+    width: 26px;
+    left: 5.3%;
+    top: 39%;
+    z-index: 100;
+}
+.aside2>img:nth-child(2){
+    position: fixed;
+    height: 40px;
+    width: 35px;
+    left: 5%;
+    top: 43%;
+    z-index: 100;
+}
+.aside2>img:nth-child(3){
+    position: fixed;
+    height: 26px;
+    width: 26px;
+    left: 5.3%;
+    top: 48.4%;
+    z-index: 100;
+    transform: rotate(180deg)
+}
+@keyframes aside2appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 section{
     position: relative;
     height: 700px;

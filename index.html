@@ -2,7 +2,7 @@
  * @Author: zyx 13415143367@163.com
  * @Date: 2022-12-17 20:19:30
  * @LastEditors: zyx 13415143367@163.com
- * @LastEditTime: 2022-12-20 19:05:36
+ * @LastEditTime: 2022-12-21 17:59:43
  * @FilePath: \vscode file\personal\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>zyx's personal website</title>
     <link rel="stylesheet" href="personal.css">
     <script src="./pasonal.js"></script>
 </head>
@@ -23,7 +23,7 @@
             <li>-</li>
             <li>zhao yuan xin</li>
         </ul>
-        <div class="down">
+        <div class="down" onclick="nexttomy()">
             <img src="./image/double-down-arrow.png">
         </div>
         <div class="headerspan">
@@ -33,13 +33,34 @@
         </div>
     </header>
     <aside>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ul id="list">
+            <li class="active" id="1">
+                <img src="./image/asidehome.png">
+                首页
+            </li>
+            <li onclick="scrolltomy()" id="2">
+                <img src="./image/my.png">
+                我的
+            </li>
+            <li onclick="scrolltogood()" id="3">
+                <img src="./image/good.png">
+                专长
+            </li>
+            <li onclick="scrolltoplan()" id="4">
+                <img src="./image/et-plan.png">
+                作品
+            </li>
+            <li onclick="scrolltoemail()" id="5">
+                <img src="./image/asidemail.png">
+                联系
+            </li>
         </ul>
     </aside>
+    <div class="aside2">
+        <img src="./image/top.png">
+        <img src="./image/point.png">
+        <img src="./image/top.png">
+    </div>
     <section>
         <div class="back">
             <div class="about">About Me</div>
@@ -61,7 +82,7 @@
                 <span>Electronic and Information Engineering </span>
             </div>
         </div>
-        <div class="down">
+        <div class="down" onclick="nextpage()">
             <img src="./image/double-down-arrow.png">
         </div>
     </section>
@@ -229,6 +250,8 @@
         var image4 = document.getElementById('preview-image4');
         var picturemessage = document.querySelector('.picturemessage')
         var picturemessage2 = document.querySelector('.picturemessage2')
+        var asides = document.querySelectorAll('#list>li')
+        var backtop = document.querySelector('.backtop')
             for(var i=0;i<items.length;i++){
                 items[i].setAttribute('index',i)
                 items[i].onclick = function(){
@@ -310,6 +333,42 @@
                     linemove.classList.remove('lineactive')
                     back[0].classList.remove('skillactive')
                 }
+                
+                var timer = null
+                if(top<1){
+                    clearTimeout(timer)
+                    for(var i=0;i<asides.length;i++){
+                        asides[i].classList.remove('active')
+                    }
+                        asides[0].classList.add('active')
+
+                }   
+                
+                if(top>601){
+                    for(var i=0;i<asides.length;i++){
+                        asides[i].classList.remove('active')
+                    }
+                    asides[1].classList.add('active')
+                }
+                if(top>1300){
+                    for(var i=0;i<asides.length;i++){
+                        asides[i].classList.remove('active')
+                    }
+                    asides[2].classList.add('active')
+                }
+                if(top>2000){
+                    for(var i=0;i<asides.length;i++){
+                        asides[i].classList.remove('active')
+                    }
+                    asides[3].classList.add('active')
+                }
+                if(top>2400){
+                    for(var i=0;i<asides.length;i++){
+                        asides[i].classList.remove('active')
+                    }
+                    asides[4].classList.add('active')
+                }
+
             }
             
             nextbutton.onclick = function(){
@@ -361,6 +420,72 @@
                 picturemessage2.className='picturemessage'
             }
 
+            window.addEventListener('load', function() {
+            var list = document.getElementById('list');
+            var items = list.getElementsByTagName('li');
+            var i;
+
+            for (i = 0; i < items.length; i++) {
+                // 添加元素到 DOM 中
+                setTimeout(function(item) {
+                item.classList.add('show');
+                }, i * 400, items[i]);
+            }
+        });
+            
+            for(var i=0;i<asides.length;i++){
+                asides[i].onclick=function(e){
+
+                if(e.target.id==='1'){
+                    window.scrollTo({
+                        top:0,
+                        behavior:'smooth'
+                    })
+                }else if(e.target.id==='2'){
+                    window.scrollTo({
+                        top:700,
+                        behavior:'smooth'
+                    })
+                }else if(e.target.id==='3'){
+                    window.scrollTo({
+                        top:1380,
+                        behavior:'smooth'
+                    })
+                }else if(e.target.id==='4'){
+                    window.scrollTo({
+                        top:2080,
+                        behavior:'smooth'
+                    })
+                }else if(e.target.id==='5'){
+                    window.scrollTo({
+                        top:2780,
+                        behavior:'smooth'
+                    })
+                }
+
+                }
+            }
+
+            function nextpage(){
+                window.scrollTo({
+                        top:1380,
+                        behavior:'smooth'
+                    })
+            }
+
+            function nexttomy(){
+                window.scrollTo({
+                        top:700,
+                        behavior:'smooth'
+                    })
+            }
+
+            backtop.onclick=function(){
+                window.scrollTo({
+                        top:0,
+                        behavior:'smooth'
+                    })
+            }
     </script>
 </body>
 </html>
