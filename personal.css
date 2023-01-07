@@ -393,6 +393,26 @@ section{
     line-height: 30px;
     text-align: end;
 }
+@keyframes spanmove {
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes espanmove {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 .message{
     height: 300px;
     width: auto;
@@ -401,6 +421,9 @@ section{
     top: 39%;
     font-size: 25px;
     color: rgba(255, 255, 255, 0.811);
+}
+.messagemove{
+    animation: spanmove 0.7s linear;
 }
 .message>span{
     display: block;
@@ -413,6 +436,9 @@ section{
     top: 60%;
     font-size: 25px;
     color: rgba(255, 255, 255, 0.811);
+}
+.enmessagemove{
+    animation: espanmove 0.7s linear;
 }
 .enmessage>span{
     display: block;
